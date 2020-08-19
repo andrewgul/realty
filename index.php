@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include "php/get_all_realty.php"
 ?>
 <!DOCTYPE html>
@@ -37,7 +39,7 @@ include "php/get_all_realty.php"
                     <strong><a href="realty.php?id=<?=$r['id']?>"><?=$r['title']?></a></strong>
                     <br>
                     <p></p>
-                    <p><b><?=$r['addr']?>(<?=$r['coord']?>)</b></p>
+                    <p><b><?=$r['addr']?> (<?=$r['coord']?>)</b></p>
                     <?=$r['descr']?>
                 </p>
                 </div>

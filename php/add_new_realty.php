@@ -26,7 +26,7 @@ if (!empty($_POST['title']) && !empty($_POST['descr']) && !empty($_POST['addr'])
 
             // Если у файла есть имя
             if (!empty($_FILES['photo']['name'][$i])) {
-
+                
                 // Задаем имя файла на сервере
                 $uploadfile = $uploaddir . basename($_FILES['photo']['name'][$i]);
 

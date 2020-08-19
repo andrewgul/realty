@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include "php/get_realty_info.php"
 ?>
 <!DOCTYPE html>
@@ -6,12 +8,13 @@ include "php/get_realty_info.php"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Объявление 25<?=$_POST['id']?></title>
+    <title><?=$realty['title']?></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" integrity="sha512-ADrqa2PY1TZtb/MoLZIZu/Z/LlPaWQeDMBV73EMwjGam43/JJ5fqW38Rq8LJOVGCDfrJeOMS3Q/wRUVzW5DkjQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 </head>
 <body>
     <div class="container">
+        <a href="index.php"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>&nbsp;Ко всем объявлениям</a>
         <p class="title"><?=$realty['title']?></p>
         <p class="subtitle"><?=$realty['addr']?> (<?=$realty['coord']?>)</p>
         <hr>
